@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class KafkaDatabaseConsumer {
-
     private final WikiDataRepository dataRepository;
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaDatabaseConsumer.class);
+
     @KafkaListener(
             topics = "wiki_changes",
             groupId = "consGroup"
